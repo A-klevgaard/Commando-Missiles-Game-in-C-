@@ -100,10 +100,8 @@ namespace KlevgaardA_Lab02_Missiles
             //is due to how enemy missile generation interacts with my "wall bounce" enhancement. Basically, if wall bounce is 
             //enabled then whenever a ball is created  within 5 units (1/2 radius) of a wall boundary, it considers itself
             //"past the wall" as it should, however it continuously "bounces" back and forth quickly, drops to 
-            //the bottom boundary, and kills all the player lives in 5 cycles. As a quick fix, I've just made sure that enemy missiles
-            //won't be generated in the slim areas that lead to that bug, which removes 99% of my wall bounce issues I'm sure there
-            //is a better way, but since I'm running out of time and energy for this lab, this is what I'll do for now,
-            //since it's simple, and it doesn't affect gameplay much.
+            //the bottom boundary, and kills all the player lives in 5 cycles. As afix, I've just made sure that enemy missiles
+            //won't be generated in the slim areas that lead to that bug.
             _origin = new Point(_rng.Next(6,_canvas.ScaledWidth - 6),0);    
 
             _angle = _rng.NextDouble() * (5 * Math.PI / 4 - 3 * Math.PI / 4) + 3 * Math.PI / 4; //rng(0-1) * (upperlimit - lowerlimit) + min value
